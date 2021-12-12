@@ -1,5 +1,6 @@
 package view;
 
+import controller.BarGraph;
 import controller.Controller;
 import controller.Message;
 import model.Model;

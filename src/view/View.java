@@ -32,7 +32,6 @@ public class View extends JFrame {
         this.buttonRest = new JButton("Reset");
         this.barGraph = new BarGraph();
 
-
         buttonUpdate.addActionListener(e -> {
             int valRed = Integer.parseInt(textFieldRed.getText());
             int valGreen = Integer.parseInt(textFieldGreen.getText());
@@ -40,7 +39,6 @@ public class View extends JFrame {
             try {
                 Message msg = new UpdatedMessage(valRed, valGreen, valBlue);
                 queue.put(msg);
-
             } catch (InterruptedException exception) {
                 exception.printStackTrace();
             }
@@ -66,8 +64,9 @@ public class View extends JFrame {
         this.add(textFieldBlue);
         this.add(buttonUpdate);
         this.add(buttonRest);
+        this.add(barGraph);
 
-        this.setSize(500, 500);
+        this.setSize(600, 600);
         this.setLayout(new FlowLayout());
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
